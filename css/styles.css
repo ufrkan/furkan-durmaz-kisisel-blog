@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'WF Visual Sans Text';
+    src: url('./fonts/WFVisualSans-RegularText.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'WF Visual Sans Text';
+    src: url('./fonts/WFVisualSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'WF Visual Sans Text';
+    src: url('./fonts/WFVisualSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  :root {
+    --color-turuncu: #FF6500;
+    --color-acik-siyah: #1E3E62;
+    --color-dark: #0B192C;
+    --color-black: #000000;
+  }
+  
+
+  ::selection {
+        background-color: var(--color-turuncu);
+        color: white;
+  }
+  
+  body {
+    font-family: 'WF Visual Sans Text', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  .nav-item:hover {
+    border-radius: 25px;
+    background: var(--color-turuncu);
+  }
+
+  .navbar-nav:has(li:hover) li:not(:hover) {
+    transition: .5s;
+    filter: blur(4px);
+  }
+
+
+  .navbar {
+    background-color: #0B192C;
+  }
+
+  header {
+    background-color: var(--color-dark);
+    color: white;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: rotate(180deg);
+  }
+
+  .lead {
+    letter-spacing: 6px;
+  }
+
+  .gecis {
+    aspect-ratio: 11/6;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .gecis1 {
+    background-image: url('../img/gecis2.svg');
+  }
+
+  .efekt {
+    filter: grayscale(100%);
+    transition: filter 0.5s, transform 0.3s;
+  }
+
+  .efekt:hover {
+    filter: grayscale(0%);
+    transform: rotate(5deg) scale(1.05);;
+    
+  }
+
+  .buton {
+    background-color: var(--color-dark);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+
+  .buton:hover {
+    background-color: var(--color-turuncu);
+    transform: scale(1.05);
+    color: white;;
+  }
+
+
+  .imgEfekt {
+    transition: transform 0.3s ease;
+  }
+  .imgEfekt:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .textEfekt {
+    transition: color, 0.3s ease;
+    color: var(--color-dark);
+  }
+
+  .textEfekt:hover {
+    color: var(--color-turuncu);
+    transform: scale(1.05);
+  }
+
+
+  footer {
+    background-color: var(--color-dark);
+    color: white;
+  }
+
+  .footerEfekt {
+    transition: color, 0.3s ease;
+    color: white;
+  }
+
+  .footerEfekt:hover {
+    color: var(--color-turuncu);
+  }
+
+
+  .hover-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* karartı */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.hover-overlay:hover::after {
+  opacity: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+  font-size: 1rem;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.hover-overlay:hover .overlay-text {
+  opacity: 1;
+}
+
+
+.ratio-9x16 {
+    aspect-ratio: 9 / 16;
+
+  }
+
